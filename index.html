@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #ffe6eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Comic Sans MS", cursive;
+    }
+
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 350px;
+      position: relative;
+    }
+
+    h2 {
+      color: #ff4d6d;
+    }
+
+    img {
+      width: 260px;
+      max-width:100%;
+      margin: 15px auto;
+      display: block;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      position: relative;
+      height: 60px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #yesBtn {
+      background: #ff4d6d;
+      color: white;
+      left: 20%;
+    }
+
+    #noBtn {
+      background: #ccc;
+      right: 20%;
+    }
+
+    #result {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container" id="question">
+    <h2> Rahuley will you be my Valentine? 💝</h2>
+
+    <img src="picture.gif.gif" class="love-img">
+
+    <div class="buttons">
+      <button id="yesBtn">Yes 💖</button>
+      <button id="noBtn">No 🙈</button>
+    </div>
+  </div>
+
+  <div class="container" id="result">
+    <h2>I knew it 😍</h2>
+    <h3> Happie Valentine's Day chellooo! Ummmahhhhhhh!!!!</h3>
+    <h4> LUV U SOO SOO SOO MUCHH </h4>
+    <img src="pic.jpg.gif" alt="cute-img">
+  </div>
+
+<script>
+  const noBtn = document.getElementById("noBtn");
+  const yesBtn = document.getElementById("yesBtn");
+  const question = document.getElementById("question");
+  const result = document.getElementById("result");
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 100 - 50;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  noBtn.addEventListener("click", () => {
+    noBtn.style.transform = `translate(${Math.random()*200}px, ${Math.random()*100}px)`;
+  });
+
+  yesBtn.addEventListener("click", () => {
+    question.style.display = "none";
+    result.style.display = "block";
+  });
+</script>
+
+</body>
+</html>
